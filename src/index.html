@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="./dist/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <script type="text/javascript" src="./dist/main.js"></script>
+</head>
+<body>
+  <div class="instructions animate__animated animate__fadeInDown animate__slow">
+    <h1>Бильярд <br> JS & Rust</h1>
+    <p></p>
+    <ul>
+      <li>Если вы взяли мяч, щёлкните, чтобы поместить его в данной точке;</li>
+      <li>Передвигайте курсор, чтобы сменить угол;</li>
+      <li>Нажмите, удерживайте и отпустите, чтобы ударить по мячу. Сила удара будет соответствовать расстоянию между мячом и кием.</li>
+    </ul>
+
+    <div class="animate-flicker hidden">Загрузка...</div>
+  </div>
+  
+  <canvas id="table" class="hidden"></canvas>
+  <section class="info hidden unselectable">
+    <section class="info-top"><p class="tracker"></p></section>
+    <section class="info-bottom">
+      <section class="info-bottom-left"></section>
+      <section class="info-bottom-middle">
+        <button class="reset">Новая игра</button>
+      </section>
+      <section class="info-bottom-right"></section>
+    </section>
+  </section>
+</body>
+</html>
