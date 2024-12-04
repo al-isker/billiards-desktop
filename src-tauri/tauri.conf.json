@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "billiards-desktop",
+  "productName": "Billiards",
   "version": "0.1.0",
   "identifier": "com.billiards-desktop.app",
   "build": {
@@ -10,7 +10,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "billiards-desktop",
+        "title": "Billiards",
         "width": 800,
         "height": 600
       }
