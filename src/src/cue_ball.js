@@ -1,6 +1,5 @@
 const Util = require("./util");
 const Ball = require ("./ball.js");
-const Power = require("./power.js");
 
 class CueBall extends Ball {
   constructor() {
@@ -50,7 +49,7 @@ class CueBall extends Ball {
     let cy = this.pos[1];
     let dist = Util.getPointDistance(x, y, cx, cy);  
     let vec = [(x - cx) / dist, (y - cy) / dist]      
-    // console.log(power);  
+
     this.holdMouseForPower( (power) => {
       let vel = [vec[0] * power, vec[1] * power]     
       this.hitCue(vel, callback);          
@@ -58,11 +57,11 @@ class CueBall extends Ball {
     
   }
 
-  holdMouseForPower(callback) {   
-    let increasing = true; 
+  holdMouseForPower(callback) {
+    let increasing = true;
     const minPower = 1;
     const maxPower = 40;
-    const increment = 2;   
+    const increment = 2;
     
     const powerCounter = () => {
       const interval = setInterval(() => {
@@ -92,7 +91,6 @@ class CueBall extends Ball {
   }
 
   hitCue(vel, callback) {    
-    // console.log('hit cue');
     this.vel = vel.map( num => {
       if (num < -51) {
         return -50;

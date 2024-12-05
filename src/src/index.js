@@ -1,5 +1,3 @@
-// const Ball = require("./ball.js");
-// const Table = require("./table.js");
 const Util = require("./util.js");
 const GameView = require("./game-view.js")
 const Game = require("./game.js")
@@ -11,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.height = 600; 
 
   let game = new Game(canvas, ctx);
-  let gameView = new GameView(game, ctx);
+  new GameView(game, ctx);
  
   document.addEventListener("click", e => {
     console.log(Util.getCursorPos(e));

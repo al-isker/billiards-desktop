@@ -1,5 +1,3 @@
-// not currently implemented
-
 class Power {
   constructor() {
     this.img = new Image();
@@ -12,7 +10,6 @@ class Power {
       let [x, y] = cue.pos;
       ctx.drawImage(this.img,x - 50, y + 20, this.getWidth(power), 200);    
     }
-    // 60, 350, 900, 200 src info
   }
 
   getWidth(power) {

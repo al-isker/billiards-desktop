@@ -2,7 +2,6 @@ const Pocket = require("./pocket.js");
 const Wall = require("./wall.js");
 const Ball = require ("./ball.js");
 const CueBall = require("./cue_ball.js");
-const Util = require("./util.js");
 
 class Table {
   constructor (canvas, ctx) {
@@ -21,8 +20,6 @@ class Table {
 
     this.solidSection = document.querySelector(".info-bottom-left");
     this.stripeSection = document.querySelector(".info-bottom-right"); 
-
-    // this.test();
   }
 
   test() {
@@ -113,13 +110,12 @@ class Table {
 
   generateWalls() {
     return [
-      new Wall(109, 67, 555, 67, 'horizontal', 'top'), //top-left
-      new Wall(631, 67, 1080, 67, 'horizontal', 'top'), //top-right
-      new Wall(109, 530, 555, 530, 'horizontal', 'bottom'),//bottom-left
-      new Wall(631, 530, 1080, 530, 'horizontal', 'bottom'), //bottom-right
-      new Wall(76, 104, 76, 495, 'vertical', 'left'), //left
-      new Wall(1120, 104, 1120, 495, 'vertical', 'right'), //right
-      // corners, clockwise starting from top-left
+      new Wall(109, 67, 555, 67, 'horizontal', 'top'),
+      new Wall(631, 67, 1080, 67, 'horizontal', 'top'),
+      new Wall(109, 530, 555, 530, 'horizontal', 'bottom'),
+      new Wall(631, 530, 1080, 530, 'horizontal', 'bottom'),
+      new Wall(76, 104, 76, 495, 'vertical', 'left'),
+      new Wall(1120, 104, 1120, 495, 'vertical', 'right'),
       new Wall(109, 67, 88, 50, '2-diag'),       
       new Wall(555, 67, 567, 52, '1-diag'),
       new Wall(631, 67, 622, 52, '2-diag'),
@@ -133,7 +129,6 @@ class Table {
       new Wall(76, 495, 55, 520, '1-diag'),
       new Wall(76, 104, 55, 85, '2-diag')
     ];
-
   }
 
   generatePockets() {

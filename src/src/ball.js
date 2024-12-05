@@ -1,5 +1,3 @@
-const Util = require("./util");
-
 const RADIUS = 15;
 
 class Ball {
@@ -107,7 +105,6 @@ class Ball {
       notCollided = true;
     }, 100);
       
-    //fix pos to avoid sticking onto walls
     let buffer = 3;
     if (wall.location === 'top') {
       this.pos[1] += buffer;

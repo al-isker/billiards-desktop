@@ -27,12 +27,6 @@ class Game {
     this.stick = new Stick(this.canvas);
     this.updateTracker();
     this.play();
-    
-
-    // setInterval(() => {
-    //   console.log('cue pos: ' + this.cue.pos)
-    //   console.log('cue vel: ' + this.cue.vel)
-    // }, 500);
   }
 
   play() {  
@@ -207,13 +201,11 @@ class Game {
         let wy1 = wall.y1;
         let wy2 = wall.y2;
 
-        //find closest point on wall
         let wallLen = Util.getPointDistance(wx1, wy1, wx2, wy2);
         let dot = ( ((bx - wx1) * (wx2 - wx1)) + ((by - wy1) * (wy2 - wy1)) ) / Math.pow(wallLen, 2);
         let closestX = wx1 + (dot * (wx2 - wx1));        
         let closestY = wy1 + (dot * (wy2 - wy1));        
 
-        //make sure closest point is on the line
         if (!wall.isPointCollide(closestX, closestY)) {
           continue;
         }
@@ -274,7 +266,7 @@ class Game {
     const p = document.querySelector(".tracker");
 
     if (this.openBreak) {
-      p.innerHTML = `Player ${num} wins by sinking the 8 on the break!`
+      p.innerHTML = `Игрок ${num} выигрывает`
       return;
     }
 
@@ -282,9 +274,9 @@ class Game {
     let checkBalls = this.table.pocketed.filter( ball => ball.type === type );
     
     if (checkBalls.length === 7 && !this.scratched) {
-      p.innerHTML = `Player ${num} wins!`
+      p.innerHTML = `Игрок ${num} выигрывает`
     } else {
-      p.innerHTML = `Player ${num} loses!`
+      p.innerHTML = `Игрок ${num} проигрывает`
     }   
   }
 }

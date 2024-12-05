@@ -1,7 +1,3 @@
-const Stick = require("./stick.js")
-const Util = require("./util.js");
-const Power = require("./power.js");
-
 class GameView {
   constructor(game, ctx) {
     this.game = game;
@@ -44,7 +40,6 @@ class GameView {
   draw () {   
     this.ctx.clearRect(0, 0, this.table.width, this.table.height);
     this.game.table.balls.forEach( (ball) => ball.draw(this.ctx));
-    // this.game.table.pockets.forEach( (pocket) => pocket.draw(this.ctx))
     this.game.table.drawPocketed();
     
     if (!this.game.cue.ballInHand) {
