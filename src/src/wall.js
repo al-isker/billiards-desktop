@@ -18,7 +18,7 @@ class Wall {
     ctx.lineTo(this.x2, this.y2);
     ctx.strokeStyle = this.color;
     ctx.lineWidth = 3;
-    ctx.stroke();    
+    ctx.stroke();
   }
 
   isPointCollide(x, y) {

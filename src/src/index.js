@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.width = 1200;
   canvas.height = 600; 
 
-  let game = new Game(canvas, ctx);
+  const game = new Game(canvas, ctx);
   new GameView(game, ctx);
  
   document.addEventListener("click", e => {
